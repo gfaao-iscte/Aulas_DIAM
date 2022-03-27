@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ questao.questao }}</h1>
+<form action="{% url 'votacao:gravaropcao' questao.id %}" method="POST">
+    {% csrf_token %}
+    Introduza uma nova opção:  <input type="text" name="novaopcao"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

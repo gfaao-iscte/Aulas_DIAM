@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'votacao:gravarquestao' %}" method="post">
+        {% csrf_token %} Texto da Nova Questão:
+        <input type="text" name="novaquestao"/>
+        <br />
+        <input type="submit" value="Gravar Nova Questão" />
+    </form>
+</body>
+</html>
